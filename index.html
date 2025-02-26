@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Linked In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(250, 235, 215, 0.412);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .nav-right i {
+            font-size: 30px;
+        }
+
+        .pad {
+            padding: 0 100px;
+        }
+
+        .input {
+            width: 300px;
+        }
+
+        .section1 {
+            width: 100vw;
+            /* height: 100vh; */
+            margin-top: 69px;
+            padding: 25px;
+            position: relative;
+            z-index: -5;
+        }
+
+        .left-1 {
+            width: 20v;
+            /* min-height: 100vh; */
+        }
+
+        .middle-1 {
+            width: 40vw;
+            /* height: 100vh; */
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .right-1 {
+            width: 20vw;
+            min-height: 300vh;
+        }
+
+        .leftone {
+            width: 100%;
+            /* height: 300px; */
+            background: white;
+        }
+
+        .lefttwo {
+            width: 100%;
+            /* height: 80px; */
+            background-color: white;
+        }
+
+        .lefthree {
+            width: 100%;
+            /* height: 80px; */
+            background: white;
+        }
+
+        .leftfour {
+            width: 100%;
+            /* height: 160px; */
+            background-color: white;
+        }
+
+        .middleone {
+            width: 100%;
+            /* height: 130px; */
+            background: white;
+        }
+
+        .middletwo {
+            width: 100%;
+            height: 650px;
+            background: white;
+        }
+
+        .rightone {
+            width: 100%;
+            /* height: 240px; */
+            background: white;
+        }
+
+        .righttwo {
+            width: 100%;
+            height: 220px;
+            background-color: white;
+            position: sticky;
+            top: 82px;
+        }
+
+        .pbg {
+            width: 100%;
+            height: 60px;
+
+        }
+
+        .profile {
+            position: relative;
+            width: 80px;
+            bottom: 35px;
+            left: 20px;
+            border-radius: 50%;
+
+        }
+
+        .plus {
+            position: relative;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .name {
+            position: relative;
+            bottom: 22px;
+            left: 15px;
+        }
+
+        .name1 {
+            position: relative;
+            bottom: 22px;
+            left: 15px;
+            font-size: 12px;
+        }
+
+        .name2 {
+            position: relative;
+            bottom: 22px;
+            left: 100px;
+            font-size: 12px;
+
+        }
+
+        .logo {
+            position: relative;
+
+        }
+
+        .pv {
+            width: 200px;
+            font-size: 13px;
+        }
+
+        .pv2 {
+            width: 192px;
+            font-size: 13px;
+        }
+
+        .divvv {
+            font-size: 13px;
+        }
+
+        .ll1 {
+            width: 200px;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .lll1 {
+            width: 10px;
+            font-size: 15px;
+            margin-right: 2px;
+        }
+
+        .lll2 {
+            width: 100px;
+        }
+
+        .llll {
+            margin-left: 10px;
+        }
+
+        .tex {
+            width: 500px;
+            border-radius: 25px;
+            border: 1px rgba(128, 128, 128, 0.505) solid;
+            height: 40px;
+            margin-top: 5px;
+        }
+
+        .stick {
+            position: relative;
+            top: 1px;
+            left: 260px;
+        }
+
+        .p1 {
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            left: 12px;
+            top: 20px;
+        }
+
+        .namee {
+            position: relative;
+            left: 70px;
+            bottom: 35px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .btm {
+            position: relative;
+            left: 70px;
+            bottom: 53px;
+            font-size: 12px;
+        }
+
+        .connect {
+            position: relative;
+            left: 450px;
+            bottom: 120px;
+            font-size: 20px;
+        }
+
+        .pluss {
+            position: relative;
+            left: 443px;
+            bottom: 125px;
+            font-size: 10px;
+        }
+
+        .conne {
+            position: relative;
+            left: 478px;
+            bottom: 145px;
+            font-weight: 600;
+        }
+
+        .c1 {
+            position: relative;
+            bottom: 130px;
+        }
+
+        .t1 {
+            position: relative;
+            bottom: 120px;
+            font-size: 15px;
+        }
+
+        .uu {
+            position: relative;
+            bottom: 200px;
+        }
+
+        .tup {
+            font-size: 15px;
+            position: relative;
+            bottom: 130px;
+            left: 10px;
+        }
+
+        .clap {
+            font-size: 15px;
+            position: relative;
+            bottom: 130px;
+            left: 8px;
+        }
+
+        .love {
+            font-size: 15px;
+            position: relative;
+            bottom: 130px;
+            left: 10px;
+        }
+
+        .comt {
+            font-size: 14px;
+            position: relative;
+            bottom: 152px;
+            left: 70px;
+        }
+
+        .commet {
+            font-size: 14px;
+            position: relative;
+            bottom: 191px;
+            left: 432px;
+        }
+
+        .cmtbox {
+            position: relative;
+            bottom: 140px;
+            left: 5px;
+        }
+
+        .uu2 {
+            position: relative;
+            bottom: 260px;
+        }
+
+        .smile {
+            position: relative;
+            font-size: 22px;
+            left: 290px;
+            top: 6px;
+        }
+
+        .imge {
+            position: relative;
+            font-size: 22px;
+            left: 300px;
+            top: 6px;
+        }
+
+        .arrow1 {
+            position: relative;
+            top: 3px;
+            left: 150px;
+        }
+
+        .arrow2 {
+            position: relative;
+            top: 3px;
+            left: 149px;
+        }
+
+        .arrow3 {
+            position: relative;
+            top: 3px;
+            left: 136px;
+        }
+
+        .arrow4 {
+            position: relative;
+            top: 3px;
+            left: 122px;
+        }
+
+        .i {
+            position: relative;
+            left: 270px;
+            bottom: 30px;
+        }
+        @media(max-width:1950px){
+            .middle-1{
+                .middleone{
+                    .conne{
+                        display: none;
+                    }
+                    .connect{
+                        display: none;
+                    }
+                    .pluss{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        @media(max-width:1200px){
+            nav {
+                .nav-right {}
+
+                .navleft {
+                    display: none;
+                }
+            }
+
+            .right-1 {
+                display: none;
+            }
+
+            .left-1 {
+                width: 30vw;
+                .leftone{
+                    .lm{
+                        display: none;
+                    }
+                }
+            }
+
+            .middle-1 {
+                width: 70vw;
+
+                .middletwo {
+                    .commet {
+                        display: none;
+                    }
+
+                    .uu {
+                        display: none;
+                    }
+
+                    .tup {
+                        display: none;
+                    }
+
+                    .love {
+                        display: none;
+                    }
+
+                    .clap {
+                        display: none;
+                    }
+
+                    .cmmt {
+                        display: none;
+                    }
+
+                    .pb {
+                        margin-top: 40px;
+                    }
+
+                    .t2 {
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+        }
+            @media(max-width:800px) {
+                .left-1 {
+                    display: none;
+                }
+
+                .middle-1 {
+                    width: 100vw;
+
+                    .middletwo {
+                        height: 500px;
+
+                        .c1 {
+                            position: relative;
+                            bottom: 60px;
+                        }
+
+                        .commet {
+                            display: none;
+                        }
+
+                        .uu {
+                            display: none;
+                        }
+
+                        .tup {
+                            display: none;
+                        }
+
+                        .love {
+                            display: none;
+                        }
+
+                        .clap {
+                            display: none;
+                        }
+
+                        .cmmt {
+                            display: none;
+                        }
+
+                        .pb {
+                            margin-top: 40px;
+                        }
+
+                        .t2 {
+                            position: relative;
+                            bottom: 10px;
+                        }
+
+                        .nn {
+                            display: none;
+                        }
+
+                        .cmtbox {
+                            width: 470px;
+                            position: relative;
+                            bottom: 50px;
+                        }
+                    }
+
+                }
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="container-fluid navigation bg-light shadow shadow-md p-1 d-flex px-5 ">
+        <div class="navleft d-flex justify-content-center align-items-center pad">
+            <img src="linkedin.png" alt="" style="width: 30px">
+            <form class="container">
+                <div class="input-group input">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control inpt p-1" placeholder="Search" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+            </form>
+        </div>
+        <div class="navright d-flex align-items-center justify-content-center px-4 ">
+            <div
+                class="home d-flex flex-column align-items-center justify-content-center px-3 border-bottom border-dark border-3">
+                <i class="fa-solid fa-house-chimney"></i>
+                <p class="n">Home</p>
+            </div>
+            <div class="network d-flex flex-column align-items-center justify-content-center px-3">
+                <i class="fa-solid fa-user-group"></i>
+                <p>My Network</p>
+            </div>
+            <div class="jobs d-flex flex-column align-items-center justify-content-center px-3">
+                <i class="fa-solid fa-briefcase"></i>
+                <p>Jobs</p>
+            </div>
+            <div class="messaging d-flex flex-column align-items-center justify-content-center px-3">
+                <i class="fa-regular fa-comment-dots"></i>
+                <p>Messaging</p>
+            </div>
+            <div class="me d-flex flex-column align-items-center justify-content-center px-3">
+                <i class="fa-solid fa-user"></i>
+                <div class="m d-flex">
+                    <p>Me</p><i class="fa-solid fa-caret-down mt-1"></i>
+                </div>
+            </div>
+            <div
+                class="notification d-flex flex-column align-items-center justify-content-center px-3 border-end border-2">
+                <i class="fa-solid fa-bell"></i>
+                <p>Notifications</p>
+            </div>
+            <div class="dots  d-flex flex-column align-items-center justify-content-center px-2">
+                <img src="3dots.png" alt="" style="width: 15px;">
+                <div class="b d-flex">
+                    <p>For Business</p>
+                    <i class="fa-solid fa-caret-down mt-1"></i>
+                </div>
+            </div>
+            <div class="dots  d-flex flex-column align-items-center justify-content-center">
+                <img src="premium.png" class="mb-0" alt="" style="width: 20px;">
+                <p>Try Premium for <i class="fa-solid fa-indian-rupee-sign mt-0"></i> 0</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section1 -->
+    <div class="section1 d-flex justify-content-center align-items-start mt-3">
+        <div class="left-1 mt-5">
+            <div class="leftone rounded border border-secondary-subtle shadow shadow-sm">
+                <div class="pbg" class="rounded">
+                    <img src="pbg.png" class="rounded" style="height: 100%;width: 100%;">
+                </div>
+                <img src="profile.jpeg" class="profile" alt="">
+                <img src="plus.png" class="plus" style="width: 28px;">
+                <h5 class="name">Sai Kiran Goud Jagiri</h5>
+                <p class="name1">Attended Sreenidhi Institute of<br> Science and Technology<br>Secunderābād, Telangana
+                </p>
+                <div class="div1">
+                    <img class="logo px-2 lm" src="snist.png" alt="" style="height: 20px;">
+                    <p class="name2 lm">Sreenidhi Institute of Science<br> and Technology</p>
+                </div>
+            </div>
+            <div
+                class="lefttwo rounded border border-secondary-subtle shadow shadow-sm my-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex mt-2">
+                    <div class="pv fw-bold">
+                        <p>Profile viewers</p>
+                    </div>
+                    <div class="divvv fw-bold">
+                        <p class="text-primary">27</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="pv2 fw-bold">
+                        <p>Post impressions</p>
+                    </div>
+                    <div class="divvv fw-bold">
+                        <p class="text-primary">504</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="lefthree rounded border border-secondary-subtle shadow shadow-sm my-2 d-flex flex-column justify-content-center align-items-center">
+                <p class="fw-light" style="font-size: 13px;">Grow professionally with Premium</p>
+                <div class="d-flex"><img src="premium.png" style="width: 20x;height: 20px;" alt="">
+                    <p class="fw-bold" style="font-size: 13px;">Try 1 month for ₹0
+                        Saved items</p>
+                </div>
+            </div>
+            <div
+                class="leftfour rounded border border-secondary-subtle shadow shadow-sm d-flex flex-column justify-content-center align-items-start px-3">
+                <div class="d-flex ll1 mt-2">
+                    <div class="lll1 llll" style="font-size: 13px;"><i class="fa-solid fa-bookmark"></i></div>
+                    <div class="lll2" style="font-size: 13px;">
+                        <p>Saved Items</p>
+                    </div>
+                </div>
+                <div class="d-flex ll1">
+                    <div class="lll1 mx-2" style="font-size: 13px;"><i class="fa-solid fa-user-group"></i></div>
+                    <div class="lll2" style="font-size: 13px;">
+                        <p>Groups</p>
+                    </div>
+                </div>
+                <div class="d-flex ll2">
+                    <div class="lll1 mx-2" style="font-size: 13px;"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="lll2" style="font-size: 13px;">
+                        <p>Newsletters</p>
+                    </div>
+                </div>
+                <div class="d-flex ll2">
+                    <div class="lll1 mx-2" style="font-size: 13px;"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="lll2" style="font-size: 13px;">
+                        <p>Events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-1 mt-5">
+            <div class="middleone rounded border border-secondary-subtle shadow shadow-sm">
+                <div class="up d-flex p-3">
+                    <div class="midd1 mx-2">
+                        <img src="profile.jpeg" style="width: 50px;border-radius: 50%;" alt="">
+                    </div>
+                    <div class="tex">
+                        <p class="mt-2 mx-2 text-secondary">Start a post</p>
+                    </div>
+                </div>
+                <div class="under d-flex justify-content-around">
+                    <div class="vid d-flex"><i class="fa-brands fa-youtube text-success fs-5 mt-1 mx-1"></i>
+                        <p>Video</p>
+                    </div>
+                    <div class="photo d-flex"><i class="fa-regular fa-image text-primary fs-5 mt-1 mx-1"></i>
+                        <p>Photo</p>
+                    </div>
+                    <div class="article d-flex"><i class="fa-regular fa-newspaper text-danger fs-5 mt-1 mx-1"></i>
+                        <p>Write article</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middletwo rounded border border-secondary-subtle shadow shadow-sm my-2">
+                <img src="p1.png" class="p1" alt="">
+                <p class="namee">Mahaam Michael</p>
+                <p class="btm">AI Engineer | Web Developer | ML Learner <br>.2d</p>
+                <i class="fa-solid fa-user text-primary connect nn"></i>
+                <i class="fa-solid fa-plus text-primary pluss nn"></i>
+                <p class="text-primary conne nn">Connect</p>
+                <p class="t1 px-2 nn">Excited to share that I’ve earned an AI Certificate, expanding my knowledge in
+                    machine learning, deep learning, and AI applications! .... </p>
+                <div class="c1 p-2 d-flex align-items-center justify-content-center">
+                    <img src="c1.png" class="" style="width: 100%;" alt="">
+                </div>
+                <i class="fa-regular fa-thumbs-up tup text-primary"></i>
+                <i class="fa-solid fa-hands-clapping text-success love"></i>
+                <i class="fa-regular fa-heart text-danger clap"></i>
+                <p class="comt cmmt">3318</p>
+                <p class="commet">123 comments-212 reposts</p>
+                <div class="uu d-flex p-2 justify-content-around align-items-center">
+                    <div class="like d-flex"><i class="fa-solid fa-thumbs-up fs-5 mx-2 mt-1 cmmt"></i>
+                        <p class="cmmt">like</p>
+                    </div>
+                    <div class="comment d-flex"><i class="fa-solid fa-comment mx-2 mt-2 mt-1 cmmt"></i>
+                        <p class="cmmt">comment</p>
+                    </div>
+                    <div class="repost d-flex"><img src="repst.png" style="width: 20px;height: 20px;"
+                            class="mx-2 mt-1 cmmt" alt="">
+                        <p class="cmmt">Repsot</p>
+                    </div>
+                    <div class="send d-flex"><i class="fa-solid fa-paper-plane mt-1 mx-2 cmmt"></i>
+                        <p class="cmmt">Send</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middletwo rounded border border-secondary-subtle shadow shadow-sm my-2">
+                <img src="p2.png" class="p1" alt="">
+                <p class="namee">Rizwana Maaya</p>
+                <p class="btm">TEST Engineer | Data Scientist | Graphic Designer<br>.3d</p>
+                <i class="fa-solid fa-user text-primary connect nn"></i>
+                <i class="fa-solid fa-plus text-primary pluss nn"></i>
+                <p class="text-primary conne nn">Connect</p>
+                <p class="t1 px-2 nn">Excited to share that I’ve earned an AI Certificate, expanding my knowledge in
+                    machine learning, deep learning, and AI applications! .... </p>
+                <div class="c1 p-2 d-flex align-items-center justify-content-center">
+                    <img src="c2.png" class="" style="width: 100%;" alt="">
+                </div>
+                <i class="fa-regular fa-thumbs-up tup text-primary cmmt"></i>
+                <i class="fa-solid fa-hands-clapping text-success love cmmt"></i>
+                <i class="fa-regular fa-heart text-danger clap cmmt"></i>
+                <p class="comt cmmt">331</p>
+                <p class="commet cmmt">12 comments-21 reposts</p>
+                <div class="cmtbox  d-flex align-items-center justify-content-center pb ">
+                    <img src="profile.jpeg " alt="" class="pf mx-2" style="border-radius: 50%;width: 50px;">
+                    <div class="tb d-flex "
+                        style="width: 500px;height: 40px ;border-radius: 25px;border: 1px solid rgba(128, 128, 128, 0.715);">
+                        <p class="text-secondary mt-2 mx-2 ">Add a comment...</p>
+                        <i class="fa-solid fa-face-smile smile my-1 nn"></i>
+                        <i class="fa-solid fa-image imge my-1 nn"></i>
+                    </div>
+                </div>
+                <div class="uu2 d-flex p-2 justify-content-around align-items-center">
+                    <div class="like d-flex"><i class="fa-solid fa-thumbs-up fs-5 mx-2 mt-1 cmmt"></i>
+                        <p class="cmmt">like</p>
+                    </div>
+                    <div class="comment d-flex"><i class="fa-solid fa-comment mx-2 mt-2 mt-1 cmmt"></i>
+                        <p class="cmmt">comment</p>
+                    </div>
+                    <div class="repost d-flex"><img src="repst.png" style="width: 20px;height: 20px;"
+                            class="mx-2 mt-1 cmmt" alt="">
+                        <p class="cmmt">Repsot</p>
+                    </div>
+                    <div class="send d-flex"><i class="fa-solid fa-paper-plane mt-1 mx-2 cmmt"></i>
+                        <p class="cmmt">Send</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middletwo rounded border border-secondary-subtle shadow shadow-sm my-2">
+                <img src="p3.png" class="p1" alt="">
+                <p class="namee">Jordan Smith</p>
+                <p class="btm">Block Chain Engineer | Software Developer<br>.3d</p>
+                <i class="fa-solid fa-user text-primary connect nn"></i>
+                <i class="fa-solid fa-plus text-primary pluss nn"></i>
+                <p class="text-primary conne cmmt nn">Connect</p>
+                <p class="t1 t2 px-2 nn">Excited to share that I’ve earned an AI Certificate, expanding my knowledge in
+                    machine learning, deep learning, and AI applications! .... </p>
+                <div class="c1 p-2 d-flex align-items-center justify-content-center">
+                    <img src="c3.png" class="" style="width: 100%;" alt="">
+                </div>
+                <i class="fa-regular fa-thumbs-up tup text-primary cmmt"></i>
+                <i class="fa-solid fa-hands-clapping text-success love cmmt"></i>
+                <i class="fa-regular fa-heart text-danger clap cmmt"></i>
+                <p class="comt cmmt">3318</p>
+                <p class="commet cmmt">123 comments-212 reposts</p>
+                <div class="uu d-flex p-2 justify-content-around align-items-center">
+                    <div class="like d-flex"><i class="fa-solid fa-thumbs-up fs-5 mx-2 mt-1 cmmt"></i>
+                        <p class="cmmt">like</p>
+                    </div>
+                    <div class="comment d-flex"><i class="fa-solid fa-comment mx-2 mt-2 mt-1 cmmt"></i>
+                        <p class="cmmt">comment</p>
+                    </div>
+                    <div class="repost d-flex"><img src="repst.png" style="width: 20px;height: 20px;"
+                            class="mx-2 mt-1 cmmt" alt="">
+                        <p class="cmmt">Repsot</p>
+                    </div>
+                    <div class="send d-flex"><i class="fa-solid fa-paper-plane mt-1 mx-2 cmmt"></i>
+                        <p class="cmmt">Send</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middletwo rounded border border-secondary-subtle shadow shadow-sm my-2">
+                <img src="p4.png" class="p1" alt="">
+                <p class="namee">Juliana Silva</p>
+                <p class="btm">Student at SNIST | VP at SSS<br>. Just Now</p>
+                <i class="fa-solid fa-user text-primary connect nn"></i>
+                <i class="fa-solid fa-plus text-primary pluss nn"></i>
+                <p class="text-primary conne nn">Connect</p>
+                <p class="t1 px-2 nn">Excited to share that I’ve earned an AI Certificate, expanding my knowledge in
+                    machine learning, deep learning, and AI applications! .... </p>
+                <div class="c1 p-2 d-flex align-items-center justify-content-center">
+                    <img src="c4.png" class="" style="width: 100%;" alt="">
+                </div>
+                <i class="fa-regular fa-thumbs-up tup text-primary cmmt"></i>
+                <i class="fa-solid fa-hands-clapping text-success love cmmt"></i>
+                <i class="fa-regular fa-heart text-danger clap cmmt"></i>
+                <p class="comt cmmt">3318</p>
+                <p class="commet cmmt">123 comments-212 reposts</p>
+                <div class="uu d-flex p-2 justify-content-around align-items-center">
+                    <div class="like d-flex"><i class="fa-solid fa-thumbs-up fs-5 mx-2 mt-1 cmmt"></i>
+                        <p class="cmmt">like</p>
+                    </div>
+                    <div class="comment d-flex"><i class="fa-solid fa-comment mx-2 mt-2 mt-1 cmmt"></i>
+                        <p class="cmmt">comment</p>
+                    </div>
+                    <div class="repost d-flex"><img src="repst.png" style="width: 20px;height: 20px;"
+                            class="mx-2 mt-1 cmmt" alt="">
+                        <p class="cmmt">Repsot</p>
+                    </div>
+                    <div class="send d-flex"><i class="fa-solid fa-paper-plane mt-1 mx-2 cmmt"></i>
+                        <p class="cmmt">Send</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-1 mt-5">
+            <div class="rightone rounded border border-secondary-subtle shadow shadow-sm p-2">
+                <h1 class="fs-5 mb-0">Trending Now</h1>
+                <img src="i.png" style="width: 20px;" class="i" alt="">
+                <p style="font-size: 12px;" class="fw-light mt-0">curated by LinkedIn News</p>
+                <p class="fw-bold" style="font-size: 12px;">Large layoffs hit Starbucks</p>
+                <p class="fw-lighter" style="font-size: 10px;">7h ago • 53,894 readers</p>
+                <p class="fw-bold" style="font-size: 12px;">High-profit GCCs on the rise</p>
+                <p class="fw-lighter" style="font-size: 10px;">13h ago • 2,527 readers</p>
+                <p class="fw-bold" style="font-size: 12px;">Smartwatches clock decline in sales</p>
+                <p class="fw-lighter" style="font-size: 10px;">7h ago • 2,471 readers</p>
+                <p class="fw-lighter" style="font-size: 13px;">Show More <i class="fa-solid fa-angle-down"></i></p>
+                <p class="text-secondary=">Today's puzzles</p>
+                <div class="tango d-flex">
+                    <img src="tango.png" class="mx-2" style="width: 30px; height: 30px;" alt="">
+                    <p style="font-size: 13px;font-weight: 600;" class="mt-1">Tango #142</p>
+                    <img src="right-arrow.png" alt="" class="arrow1" style="width: 15px;height: 15px;">
+                </div>
+                <div class="queen d-flex">
+                    <img src="queen.png" class="mx-2" style="width: 30px; height: 30px;" alt="">
+                    <p style="font-size: 13px;font-weight: 600;" class="mt-1">Queens #30</p>
+                    <img src="right-arrow.png" alt="" class="arrow2" style="width: 15px;height: 15px;">
+                </div>
+                <div class="pinpoint d-flex">
+                    <img src="pinpoint.png" class="mx-2" style="width: 30px;height: 30px;" alt="">
+                    <p style="font-size: 13px;font-weight: 600;" class="mt-1">Pinpoint #302</p>
+                    <img src="right-arrow.png" alt="" class="arrow3" style="width: 15px;height: 15px;">
+                </div>
+                <div class="crossclimb d-flex">
+                    <img src="crossclimb.png" class="mx-2" style="width: 30px;height: 30px;" alt="">
+                    <p style="font-size: 13px;font-weight: 600;" class="mt-1">Crossclimb #302</p>
+                    <img src="right-arrow.png" alt="" class="arrow4" style="width: 15px;height: 15px;">
+                </div>
+            </div>
+            <div class="righttwo rounded border border-secondary-subtle shadow shadow-sm my-2">
+                <p class="stick fw-bold m-0" style="font-size: 13px;">Ad ...</p>
+                <p style="font-size: 13px;" class="text-center m-0">Try Google Workspace at no cost for 14 days.</p>
+                <p class="text-center m-0" style="font-size: 13px;">Get started today</p>
+                <div class="d-flex align-items-center justify-content-center mt-3">
+                    <img src="profile.jpeg" class="mx-2" style="width:17%;height: 17%;border-radius: 50%;" alt="">
+                    <img src="google.png" style="width:17%;height: 17%;border-radius: 50%;" alt="">
+                </div>
+                <p class="text-center mt-2" style="font-size: 13px;">Save time and increase productivity</p>
+                <div class="buton d-flex align-items-center justify-content-center">
+                    <button class="btn btn-outline-primary py-1" style="border-radius: 25px;">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
