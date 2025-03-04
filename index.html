@@ -22,41 +22,23 @@
             background-color: rgba(250, 235, 215, 0.412);
         }
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .nav-right i {
-            font-size: 30px;
-        }
-
-        .pad {
-            padding: 0 100px;
-        }
-
-        .input {
-            width: 300px;
+        .navbar{
+            padding-left: 10%;
+            padding-right: 10%;
         }
 
         .section1 {
             width: 100vw;
-            /* height: 100vh; */
-            margin-top: 69px;
+            margin-top: 90px;
             padding: 25px;
-            position: relative;
-            z-index: -5;
         }
 
         .left-1 {
-            width: 20v;
-            /* min-height: 100vh; */
+            width: 20vw;
         }
 
         .middle-1 {
             width: 40vw;
-            /* height: 100vh; */
             margin-left: 15px;
             margin-right: 15px;
         }
@@ -68,31 +50,26 @@
 
         .leftone {
             width: 100%;
-            /* height: 300px; */
             background: white;
         }
 
         .lefttwo {
             width: 100%;
-            /* height: 80px; */
             background-color: white;
         }
 
         .lefthree {
             width: 100%;
-            /* height: 80px; */
             background: white;
         }
 
         .leftfour {
             width: 100%;
-            /* height: 160px; */
             background-color: white;
         }
 
         .middleone {
             width: 100%;
-            /* height: 130px; */
             background: white;
         }
 
@@ -104,7 +81,6 @@
 
         .rightone {
             width: 100%;
-            /* height: 240px; */
             background: white;
         }
 
@@ -113,7 +89,7 @@
             height: 220px;
             background-color: white;
             position: sticky;
-            top: 82px;
+            top: 100px;
         }
 
         .pbg {
@@ -354,35 +330,10 @@
             top: 3px;
             left: 72px;
         }
-
-        .i {
-            position: relative;
-            left: 270px;
-            bottom: 30px;
-        }
-        @media(max-width:1950px){
-            .middle-1{
-                .middleone{
-                    .conne{
-                        display: none;
-                    }
-                    .connect{
-                        display: none;
-                    }
-                    .pluss{
-                        display: none;
-                    }
-                }
-            }
-
-        }
         @media(max-width:1200px){
-            nav {
-                .nav-right {}
-
-                .navleft {
-                    display: none;
-                }
+            .navbar{
+                padding-left: 10px;
+                padding-right: 400px;
             }
 
             .right-1 {
@@ -443,6 +394,7 @@
                 }
 
                 .middle-1 {
+                    padding: 30px;
                     width: 100vw;
 
                     .middletwo {
@@ -503,59 +455,52 @@
 </head>
 
 <body>
-
     <!-- Nav Bar -->
-<!--     Hello -->
-    <nav class="container-fluid navigation bg-light shadow shadow-md p-1 d-flex px-5 ">
-        <div class="navleft d-flex justify-content-center align-items-center pad">
-            <img src="linkedin.png" alt="" style="width: 30px">
-            <form class="container">
-                <div class="input-group input">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" class="form-control inpt p-1" placeholder="Search" aria-label="Username"
-                        aria-describedby="basic-addon1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
+        <div class="container-fluid d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="linkedin.png" alt="LinkedIn Logo" width="30">
+                <form class="d-flex mx-2">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control d-none d-lg-block" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <div class="px-2 text-center">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <p class="m-0 small d-none d-md-block">Home</p>
                 </div>
-            </form>
-        </div>
-        <div class="navright d-flex align-items-center justify-content-center px-4 ">
-            <div
-                class="home d-flex flex-column align-items-center justify-content-center px-3 border-bottom border-dark border-3">
-                <i class="fa-solid fa-house-chimney"></i>
-                <p style="font-size: 15px;">Home</p>
-            </div>
-            <div class="network d-flex flex-column align-items-center justify-content-center px-3">
-                <i class="fa-solid fa-user-group"></i>
-                <p style="font-size: 15px;">My Network</p>
-            </div>
-            <div class="jobs d-flex flex-column align-items-center justify-content-center px-3">
-                <i class="fa-solid fa-briefcase"></i>
-                <p style="font-size: 15px;">Jobs</p>
-            </div>
-            <div class="messaging d-flex flex-column align-items-center justify-content-center px-3">
-                <i class="fa-regular fa-comment-dots"></i>
-                <p style="font-size: 15px;">Messaging</p>
-            </div>
-            <div class="me d-flex flex-column align-items-center justify-content-center px-3">
-                <i class="fa-solid fa-user"></i>
-                <div class="m d-flex">
-                    <p style="font-size: 15px;">Me</p><i class="fa-solid fa-caret-down mt-1"></i>
+                <div class="px-2 text-center">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p class="m-0 small d-none d-md-block">Network</p>
                 </div>
-            </div>
-            <div
-                class="notification d-flex flex-column align-items-center justify-content-center px-3 border-end border-2">
-                <i class="fa-solid fa-bell"></i>
-                <p>Notifications</p>
-            </div>
-            <div class="dots  d-flex flex-column align-items-center justify-content-center px-2">
-                <img src="3dots.png" alt="" style="width: 15px;">
-                <div class="b d-flex">
-                    <p>For Business</p>
-                    <i class="fa-solid fa-caret-down mt-1"></i>
+                <div class="px-2 text-center">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p class="m-0 small d-none d-md-block">Jobs</p>
                 </div>
-            </div>
-            <div class="dots  d-flex flex-column align-items-center justify-content-center">
-                <img src="premium.png" class="mb-0" alt="" style="width: 20px;">
-                <p>Try Premium for <i class="fa-solid fa-indian-rupee-sign mt-0"></i> 0</p>
+                <div class="px-2 text-center">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <p class="m-0 small d-none d-md-block">Messaging</p>
+                </div>
+                <div class="px-2 text-center">
+                    <i class="fa-solid fa-bell"></i>
+                    <p class="m-0 small d-none d-md-block">Notifications</p>
+                </div>
+                <div class="px-2 text-center">
+                    <i class="fa-solid fa-user"></i>
+                    <p class="m-0 small d-none d-md-block">Me <i class="fa-solid fa-caret-down"></i></p>
+                </div>
+                <div class="px-2 text-center border-start">
+                    <img src="3dots.png" alt="" width="15">
+                    <p class="m-0 small d-none d-md-block">For Business <i class="fa-solid fa-caret-down"></i></p>
+                </div>
+                <div class="px-2 text-center">
+                    <img src="premium.png" alt="" width="20">
+                    <p class="m-0 small d-none d-md-block">Try Premium for <i class="fa-solid fa-indian-rupee-sign"></i> 0</p>
+                </div>
             </div>
         </div>
     </nav>
@@ -799,8 +744,10 @@
         </div>
         <div class="right-1 mt-5">
             <div class="rightone rounded border border-secondary-subtle shadow shadow-sm p-2">
-                <h1 class="fs-5 mb-0">Trending Now</h1>
-                <img src="i.png" style="width: 20px;" class="i" alt="">
+                <div class="d-flex justify-content-between">
+                    <h1 class="fs-5 mb-0">Trending Now</h1>
+                    <img src="i.png" style="width: 20px;" class="i" alt="">
+                </div>
                 <p style="font-size: 12px;" class="fw-light mt-0">curated by LinkedIn News</p>
                 <p class="fw-bold" style="font-size: 12px;">Large layoffs hit Starbucks</p>
                 <p class="fw-lighter" style="font-size: 10px;">7h ago • 53,894 readers</p>
