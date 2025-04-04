@@ -1,4 +1,4 @@
-# LinkedIn Clone 🌐  
+# LinkedIn Clone 💼  
 
 A simple **LinkedIn Clone** built using **HTML** and **CSS**. This project replicates the front-end design of Google's homepage with a clean and responsive layout.  
 
